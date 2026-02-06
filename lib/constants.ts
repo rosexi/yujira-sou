@@ -1,6 +1,6 @@
 export const SITE_URL = "https://yujirasou.com";
 export const KENNEL_NAME = "Yujira Sou";
-export const KENNEL_NAME_JP = "有地楽荘";
+export const KENNEL_NAME_JP = "優鯨荘";
 export const BREED = "Shikoku Ken";
 export const LOCATION = "San Francisco, California";
 

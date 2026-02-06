@@ -27,7 +27,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-mist leading-relaxed max-w-md mb-12">
-            We welcome inquiries about the Shikoku Ken, our breeding program,
+            We welcome inquiries about the Shikoku Ken, our kennel program,
             and puppy availability. We respond to every genuine inquiry —
             please allow a few days for our reply.
           </p>

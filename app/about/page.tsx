@@ -6,19 +6,19 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 export const metadata: Metadata = {
   title: "Our Kennel",
   description:
-    "The story, philosophy, and ethics behind Yujira Sou — a Shikoku Ken kennel in San Francisco dedicated to preservation breeding.",
+    "The story, philosophy, and ethics behind Yujira Sou — a Shikoku Ken kennel in San Francisco dedicated to preservation of the breed.",
 };
 
 const philosophyCards = [
   {
     number: "01",
     title: "Breed Standard First",
-    text: "Every breeding decision begins with the Nihon Ken standard. Structure, temperament, and type are not negotiable. We evaluate our dogs honestly, acknowledge their faults openly, and breed to improve — not to replicate.",
+    text: "Every kennel decision begins with the Nihon Ken standard. Structure, temperament, and type are not negotiable. We evaluate our dogs honestly, acknowledge their faults openly, and improve — not replicate.",
   },
   {
     number: "02",
     title: "Health as Foundation",
-    text: "Comprehensive health testing is the baseline, not the ceiling. OFA hips, patellas, eyes, and DNA panels are completed before any breeding is considered. We share results publicly because transparency benefits the breed.",
+    text: "Comprehensive health testing is the baseline, not the ceiling. OFA hips, patellas, eyes, and DNA panels are completed before any pairing is considered. We share results publicly because transparency benefits the breed.",
   },
   {
     number: "03",
@@ -37,7 +37,7 @@ export default function AboutPage() {
           label="Kennel property — wide shot"
           className="w-full"
         />
-        <div className="mx-8 md:mx-16 lg:mx-32 -mt-16 md:-mt-24 relative z-10 bg-stone pt-12 pb-16 md:pb-24">
+        <div className="mx-8 md:mx-16 lg:mx-32 -mt-16 md:-mt-24 relative z-10 bg-stone px-8 md:px-16 pt-12 pb-16 md:pb-24">
           <SectionLabel className="mb-6">Our Story</SectionLabel>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-charcoal mb-8">
             Yujira Sou
@@ -51,14 +51,15 @@ export default function AboutPage() {
               trails, and remind us daily why this breed matters.
             </p>
             <p className="mb-6">
-              The name Yujira Sou (有地楽荘) translates loosely to &ldquo;a place of
-              joyful ground&rdquo; — a nod to the coastal hills of San Francisco
-              and the mountainous terrain of Shikoku, the island prefecture
-              where the breed originated. We chose it as a reminder that these
-              dogs belong in landscape, not just in show rings.
+              The name Yujira Sou (優鯨荘) translates loosely to &ldquo;lodge of the
+              honorable whale&rdquo; — a nod to the Pacific coastline of San
+              Francisco and the maritime heritage of Shikoku, the island
+              prefecture where the breed originated. We chose it as a reminder
+              that these dogs come from a place shaped by ocean and mountain
+              alike.
             </p>
             <p className="mb-6">
-              Our breeding program is built on dogs we have raised, trained,
+              Our kennel program is built on dogs we have raised, trained,
               shown, and lived with. We know their strengths because we see
               them every day. We know their limitations because we are honest
               about them. That honesty is the foundation of everything we do.
@@ -119,7 +120,7 @@ export default function AboutPage() {
           </h2>
           <ol className="space-y-6">
             {[
-              "Health test all breeding dogs to OFA standards at minimum.",
+              "Health test all kennel dogs to OFA standards at minimum.",
               "Breed only dogs that meet or exceed the Nihon Ken standard in structure and temperament.",
               "Place puppies with approved families under contract, with lifetime return guarantee.",
               "Share health results, pedigrees, and evaluations openly with the community.",
@@ -167,7 +168,7 @@ export default function AboutPage() {
             </h3>
             <p className="text-sm text-mist leading-relaxed mb-6">
               The NASC serves as the breed community hub for Shikoku Ken
-              owners and breeders in North America. We participate in club
+              owners and kennels in North America. We participate in club
               events, contribute to breed education, and support the club&apos;s
               mission of responsible stewardship.
             </p>

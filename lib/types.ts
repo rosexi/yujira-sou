@@ -6,7 +6,7 @@ export interface Dog {
   sex: "Male" | "Female";
   dateOfBirth: string;
   color: string;
-  breeder: string;
+  kennel: string;
   sire: string;
   dam: string;
   titles: string[];

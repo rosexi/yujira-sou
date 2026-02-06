@@ -46,6 +46,18 @@ body {
   animation-delay: var(--delay, 0s);
 }
 
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
 /* Animated underline link */
 .link-underline {
   position: relative;

@@ -8,7 +8,7 @@ import TimelineStep from "@/components/TimelineStep";
 export const metadata: Metadata = {
   title: "Puppies",
   description:
-    "Information about Yujira Sou's breeding philosophy, puppy placement process, and what we look for in prospective families.",
+    "Information about Yujira Sou's kennel philosophy, puppy placement process, and what we look for in prospective families.",
 };
 
 const priorities = [
@@ -44,7 +44,7 @@ const processSteps = [
   {
     title: "Litter Announcement",
     description:
-      "When a breeding is confirmed, we notify waitlist families with details about the pairing, our goals for the litter, and expected timeline.",
+      "When a pairing is confirmed, we notify waitlist families with details about the match, our goals for the litter, and expected timeline.",
   },
   {
     title: "Puppy Evaluation & Matching",
@@ -62,11 +62,11 @@ export default function PuppiesPage() {
   return (
     <>
       {/* 1. Philosophy — image left, text right */}
-      <section className="grid grid-cols-1 md:grid-cols-[2fr_5fr] min-h-[60vh]">
+      <section className="grid grid-cols-1 md:grid-cols-[2fr_5fr] min-h-screen">
         <ImagePlaceholder
           aspect="aspect-auto"
           label="Shikoku Ken puppies"
-          className="min-h-[40vh] md:min-h-[60vh]"
+          className="min-h-[50vh] md:min-h-screen"
         />
         <div className="flex flex-col justify-center px-8 md:px-16 py-16 md:py-0">
           <SectionLabel className="mb-6">Puppies</SectionLabel>

@@ -25,7 +25,7 @@ export default function Home() {
             {KENNEL_NAME_JP}
           </p>
           <p className="text-mist mt-6 max-w-sm leading-relaxed">
-            Preservation breeding of the Shikoku Ken. Rooted in standard, guided
+            A Shikoku Ken preservation kennel. Rooted in standard, guided
             by health, measured by the dogs themselves.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
           <div className="w-12 h-px bg-bronze mb-8" />
           <SectionLabel className="mb-4">Our Approach</SectionLabel>
           <p className="text-mist leading-relaxed">
-            Every breeding decision at Yujira Sou begins with the standard and
+            Every kennel decision at Yujira Sou begins with the standard and
             ends with the dog. We health test comprehensively, evaluate
             honestly, and place deliberately. The Shikoku Ken is a rare breed
             — fewer than 8,000 exist worldwide. That rarity demands

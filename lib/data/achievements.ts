@@ -98,7 +98,7 @@ export const faqs: FAQ[] = [
   {
     question: "Do you have puppies available?",
     answer:
-      "We breed infrequently and intentionally — typically one litter every two to three years. All litters are planned well in advance with specific breeding goals. We maintain a waitlist and encourage interested families to reach out early.",
+      "We produce litters infrequently and intentionally — typically one every two to three years. All litters are planned well in advance with specific kennel goals. We maintain a waitlist and encourage interested families to reach out early.",
   },
   {
     question: "What is the adoption process?",
@@ -113,7 +113,7 @@ export const faqs: FAQ[] = [
   {
     question: "What health testing do you perform?",
     answer:
-      "All breeding dogs receive OFA hip and patella evaluations, OFA eye exams, and GM1 Gangliosidosis DNA testing at minimum. We believe comprehensive health testing is a non-negotiable foundation of responsible breeding.",
+      "All dogs in our kennel program receive OFA hip and patella evaluations, OFA eye exams, and GM1 Gangliosidosis DNA testing at minimum. We believe comprehensive health testing is a non-negotiable foundation of responsible stewardship.",
   },
   {
     question: "Do you ship puppies?",
@@ -123,6 +123,6 @@ export const faqs: FAQ[] = [
   {
     question: "What is the cost of a Shikoku Ken puppy?",
     answer:
-      "We are happy to discuss pricing with approved applicants. Our pricing reflects the investment in health testing, proper care, socialization, and the considerable effort involved in preservation breeding a rare breed.",
+      "We are happy to discuss pricing with approved applicants. Our pricing reflects the investment in health testing, proper care, socialization, and the considerable effort involved in preserving a rare breed.",
   },
 ];

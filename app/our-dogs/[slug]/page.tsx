@@ -71,8 +71,8 @@ export default async function DogProfilePage({ params }: Props) {
               <p className="text-sm text-charcoal mt-1">{dog.dateOfBirth}</p>
             </div>
             <div>
-              <SectionLabel>Breeder</SectionLabel>
-              <p className="text-sm text-charcoal mt-1">{dog.breeder}</p>
+              <SectionLabel>Kennel</SectionLabel>
+              <p className="text-sm text-charcoal mt-1">{dog.kennel}</p>
             </div>
             <div>
               <SectionLabel>Sire</SectionLabel>

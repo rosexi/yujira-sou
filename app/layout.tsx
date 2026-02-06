@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     template: `%s — ${KENNEL_NAME}`,
   },
   description:
-    "Yujira Sou is a Shikoku Ken kennel in San Francisco dedicated to preservation breeding, health testing, and the continued stewardship of this rare Japanese breed.",
+    "Yujira Sou is a Shikoku Ken preservation kennel in San Francisco dedicated to health testing and the continued stewardship of this rare Japanese breed.",
   openGraph: {
     title: `${KENNEL_NAME} — Shikoku Ken, San Francisco`,
     description:
-      "Preservation breeding of the Shikoku Ken in San Francisco, California.",
+      "Shikoku Ken preservation kennel in San Francisco, California.",
     url: SITE_URL,
     siteName: KENNEL_NAME,
     locale: "en_US",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${KENNEL_NAME} — Shikoku Ken, San Francisco`,
     description:
-      "Preservation breeding of the Shikoku Ken in San Francisco, California.",
+      "Shikoku Ken preservation kennel in San Francisco, California.",
   },
   robots: {
     index: true,
@@ -61,7 +61,7 @@ const jsonLd = {
   name: KENNEL_NAME,
   url: SITE_URL,
   description:
-    "Preservation breeding of the Shikoku Ken in San Francisco, California.",
+    "Shikoku Ken preservation kennel in San Francisco, California.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "San Francisco",

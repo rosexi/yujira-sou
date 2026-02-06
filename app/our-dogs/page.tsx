@@ -23,7 +23,7 @@ export default function OurDogsPage() {
         <p className="text-mist mt-4 max-w-xl leading-relaxed">
           Each dog at Yujira Sou has been selected for breed type, health,
           and temperament. They are family first, show dogs second, and
-          breeding stock by careful intention.
+          kennel stock by careful intention.
         </p>
       </section>
 
