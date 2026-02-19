@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import { dogs } from "@/lib/data/dogs";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import SectionLabel from "@/components/SectionLabel";
 import DogCard from "@/components/DogCard";
 
 export const metadata: Metadata = {
-  title: "The Pack",
+  title: "Our Shikoku Ken",
   description:
-    "Meet the Shikoku Ken of Yujira Sou — our foundation dogs, imports, and the next generation.",
+    "Meet the Shikoku Ken of Yujira Sou — our foundation dogs, Japanese imports, and the next generation. Health-tested dogs from a preservation breeder in San Francisco.",
 };
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", href: "/" },
+  { name: "Our Dogs", href: "/our-dogs" },
+]);
 
 export default function OurDogsPage() {
   const featured = dogs.filter((d) => d.featured);
@@ -15,6 +21,10 @@ export default function OurDogsPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="px-8 md:px-16 lg:px-24 pt-32 md:pt-40 pb-16">
         <SectionLabel className="mb-6">Our Dogs</SectionLabel>
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-charcoal">

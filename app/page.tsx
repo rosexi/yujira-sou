@@ -1,22 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { KENNEL_NAME, KENNEL_NAME_JP } from "@/lib/constants";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import SectionLabel from "@/components/SectionLabel";
 import PullQuote from "@/components/PullQuote";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export const metadata: Metadata = {
-  title: `${KENNEL_NAME} — Shikoku Ken, San Francisco`,
+  title: {
+    absolute: `${KENNEL_NAME} — Shikoku Ken Breeder in San Francisco, California`,
+  },
 };
+
+const breadcrumbs = breadcrumbJsonLd([{ name: "Home", href: "/" }]);
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       {/* 1. Hero — grid-cols-[3fr_5fr] */}
       <section className="min-h-screen grid grid-cols-1 md:grid-cols-[3fr_5fr]">
         <div className="flex flex-col justify-center px-8 md:px-16 lg:px-24 py-32 md:py-0">
           <SectionLabel className="mb-6">
-            Shikoku Ken &middot; San Francisco
+            Shikoku Ken &middot; San Francisco, California
           </SectionLabel>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-light text-charcoal leading-[1.1]">
             {KENNEL_NAME}
@@ -25,8 +34,8 @@ export default function Home() {
             {KENNEL_NAME_JP}
           </p>
           <p className="text-mist mt-6 max-w-sm leading-relaxed">
-            A Shikoku Ken preservation kennel. Rooted in standard, guided
-            by health, measured by the dogs themselves.
+            A Shikoku Ken breeder in San Francisco. Rooted in standard,
+            guided by health, measured by the dogs themselves.
           </p>
         </div>
         <div className="relative">

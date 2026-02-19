@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
-import { SITE_URL, KENNEL_NAME } from "@/lib/constants";
+import { SITE_URL, KENNEL_NAME, DEFAULT_DESCRIPTION, SOCIAL_LINKS } from "@/lib/constants";
 import Navigation from "@/components/Navigation";
 import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
@@ -22,15 +22,13 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${KENNEL_NAME} — Shikoku Ken, San Francisco`,
+    default: `${KENNEL_NAME} — Shikoku Ken Breeder, San Francisco CA`,
     template: `%s — ${KENNEL_NAME}`,
   },
-  description:
-    "Yujira Sou is a Shikoku Ken preservation kennel in San Francisco dedicated to health testing and the continued stewardship of this rare Japanese breed.",
+  description: DEFAULT_DESCRIPTION,
   openGraph: {
-    title: `${KENNEL_NAME} — Shikoku Ken, San Francisco`,
-    description:
-      "Shikoku Ken preservation kennel in San Francisco, California.",
+    title: `${KENNEL_NAME} — Shikoku Ken Breeder, San Francisco CA`,
+    description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
     siteName: KENNEL_NAME,
     locale: "en_US",
@@ -38,9 +36,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${KENNEL_NAME} — Shikoku Ken, San Francisco`,
-    description:
-      "Shikoku Ken preservation kennel in San Francisco, California.",
+    title: `${KENNEL_NAME} — Shikoku Ken Breeder, San Francisco CA`,
+    description: DEFAULT_DESCRIPTION,
   },
   robots: {
     index: true,
@@ -57,17 +54,22 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
   name: KENNEL_NAME,
   url: SITE_URL,
-  description:
-    "Shikoku Ken preservation kennel in San Francisco, California.",
+  description: DEFAULT_DESCRIPTION,
   address: {
     "@type": "PostalAddress",
     addressLocality: "San Francisco",
     addressRegion: "CA",
     addressCountry: "US",
   },
+  areaServed: [
+    { "@type": "State", name: "California" },
+    { "@type": "City", name: "San Francisco" },
+  ],
+  sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.facebook],
+  knowsAbout: ["Shikoku Ken", "Shikoku puppies", "Japanese dog breeds"],
 };
 
 export default function RootLayout({

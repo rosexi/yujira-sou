@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { dogs, getDogBySlug, getAllDogSlugs } from "@/lib/data/dogs";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import SectionLabel from "@/components/SectionLabel";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
@@ -18,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dog = getDogBySlug(slug);
   if (!dog) return { title: "Dog Not Found" };
   return {
-    title: `${dog.callName} — ${dog.registeredName}`,
-    description: dog.bio.slice(0, 160),
+    title: `${dog.callName} — ${dog.registeredName} | Shikoku Ken`,
+    description: `${dog.bio.slice(0, 120)} Health-tested Shikoku Ken from Yujira Sou, San Francisco.`,
   };
 }
 
@@ -28,8 +29,18 @@ export default async function DogProfilePage({ params }: Props) {
   const dog = getDogBySlug(slug);
   if (!dog) notFound();
 
+  const breadcrumbs = breadcrumbJsonLd([
+    { name: "Home", href: "/" },
+    { name: "Our Dogs", href: "/our-dogs" },
+    { name: dog.callName, href: `/our-dogs/${slug}` },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       {/* 1. Portrait + info */}
       <section className="grid grid-cols-1 md:grid-cols-[5fr_4fr] min-h-screen">
         <ImagePlaceholder

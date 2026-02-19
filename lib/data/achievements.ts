@@ -125,4 +125,14 @@ export const faqs: FAQ[] = [
     answer:
       "We are happy to discuss pricing with approved applicants. Our pricing reflects the investment in health testing, proper care, socialization, and the considerable effort involved in preserving a rare breed.",
   },
+  {
+    question: "Where is Yujira Sou located?",
+    answer:
+      "Yujira Sou is located in San Francisco, in the Bay Area of Northern California. We welcome visits from prospective families throughout California and the West Coast by appointment.",
+  },
+  {
+    question: "Are there Shikoku Ken breeders in California?",
+    answer:
+      "The Shikoku Ken is an extremely rare breed — fewer than 8,000 exist worldwide — and responsible breeders are few. Yujira Sou is a preservation breeder in San Francisco, California, dedicated to health testing, breed standard, and thoughtful placement.",
+  },
 ];

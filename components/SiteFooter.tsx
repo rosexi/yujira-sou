@@ -16,7 +16,7 @@ export default function SiteFooter() {
               {KENNEL_NAME_JP}
             </p>
             <p className="text-sm text-mist mt-4 max-w-xs">
-              Shikoku Ken preservation kennel in San Francisco, California.
+              Shikoku Ken breeder and preservation kennel in San Francisco, California.
             </p>
           </div>
 

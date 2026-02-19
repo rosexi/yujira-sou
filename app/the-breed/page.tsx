@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import SectionLabel from "@/components/SectionLabel";
 import PullQuote from "@/components/PullQuote";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export const metadata: Metadata = {
-  title: "The Shikoku Ken",
+  title: "The Shikoku Ken — Breed Guide",
   description:
-    "An introduction to the Shikoku Ken — origins, temperament, the three virtues (Kan'i, Ryousei, Soboku), and what it means to live with this rare Japanese breed.",
+    "A guide to the Shikoku Ken — origins, temperament, the three virtues, and what it means to live with this rare Japanese dog breed. From a preservation breeder in California.",
 };
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", href: "/" },
+  { name: "The Shikoku Ken", href: "/the-breed" },
+]);
 
 const sportCards = [
   { title: "Conformation", description: "NIPPO, JKC, AKC Open, and IABCA evaluation systems." },
@@ -20,6 +26,10 @@ const sportCards = [
 export default function TheBreedPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       {/* 1. Hero — cinematic image with title overlay */}
       <section className="relative min-h-[80vh] flex items-end">
         <ImagePlaceholder

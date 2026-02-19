@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import SectionLabel from "@/components/SectionLabel";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export const metadata: Metadata = {
-  title: "Our Kennel",
+  title: "About Our Kennel",
   description:
-    "The story, philosophy, and ethics behind Yujira Sou — a Shikoku Ken kennel in San Francisco dedicated to preservation of the breed.",
+    "The story and philosophy behind Yujira Sou — a Shikoku Ken breeder in San Francisco, California dedicated to breed preservation, health testing, and responsible puppy placement.",
 };
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+]);
 
 const philosophyCards = [
   {
@@ -30,6 +36,10 @@ const philosophyCards = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       {/* 1. Story opening — full-bleed image, overlapping text */}
       <section>
         <ImagePlaceholder

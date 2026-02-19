@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import SectionLabel from "@/components/SectionLabel";
 import PullQuote from "@/components/PullQuote";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import TimelineStep from "@/components/TimelineStep";
 
 export const metadata: Metadata = {
-  title: "Puppies",
+  title: "Shikoku Ken Puppies",
   description:
-    "Information about Yujira Sou's kennel philosophy, puppy placement process, and what we look for in prospective families.",
+    "Shikoku Ken puppy information from Yujira Sou, a preservation breeder in San Francisco, California. Learn about our placement process, waitlist, and what we look for in puppy families.",
 };
 
 const priorities = [
@@ -58,9 +59,18 @@ const processSteps = [
   },
 ];
 
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", href: "/" },
+  { name: "Puppies", href: "/puppies" },
+]);
+
 export default function PuppiesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       {/* 1. Philosophy — image left, text right */}
       <section className="grid grid-cols-1 md:grid-cols-[2fr_5fr] min-h-screen">
         <ImagePlaceholder
@@ -71,20 +81,21 @@ export default function PuppiesPage() {
         <div className="flex flex-col justify-center px-8 md:px-16 py-16 md:py-0">
           <SectionLabel className="mb-6">Puppies</SectionLabel>
           <h1 className="font-serif text-4xl md:text-5xl font-light text-charcoal mb-8">
-            Puppy Information
+            Shikoku Ken Puppies
           </h1>
           <div className="max-w-2xl text-mist leading-relaxed space-y-6">
             <p>
-              We breed rarely and with intention. Every litter at Yujira Sou
-              is planned months or years in advance, with specific goals for
-              breed improvement and preservation. We do not breed to meet
-              demand — we breed when the right pairing presents itself.
+              We breed Shikoku Ken rarely and with intention. Every litter at
+              Yujira Sou is planned months or years in advance, with specific
+              goals for breed improvement and preservation. Based in San
+              Francisco, California, we do not breed to meet demand — we breed
+              when the right pairing presents itself.
             </p>
             <p>
-              Our puppies are raised in our home, exposed to daily life from
-              the start. Early neurological stimulation, socialization with
-              people and dogs, and exposure to varied environments are part
-              of every puppy&apos;s first weeks.
+              Our Shikoku Ken puppies are raised in our home in the Bay Area,
+              exposed to daily life from the start. Early neurological
+              stimulation, socialization with people and dogs, and exposure to
+              varied environments are part of every puppy&apos;s first weeks.
             </p>
           </div>
 

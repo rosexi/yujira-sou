@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import { achievements, showResults } from "@/lib/data/achievements";
+import { breadcrumbJsonLd } from "@/lib/seo";
 import SectionLabel from "@/components/SectionLabel";
 import AchievementRow from "@/components/AchievementRow";
 
 export const metadata: Metadata = {
-  title: "Achievements",
+  title: "Achievements & Show Results",
   description:
-    "Breed firsts, show results, and performance titles earned by Yujira Sou Shikoku Ken.",
+    "Breed firsts, show results, and titles earned by Yujira Sou Shikoku Ken in NIPPO, AKC, and IABCA shows. Based in San Francisco, California.",
 };
+
+const breadcrumbs = breadcrumbJsonLd([
+  { name: "Home", href: "/" },
+  { name: "Achievements", href: "/achievements" },
+]);
 
 export default function AchievementsPage() {
   const breedFirsts = achievements.filter((a) => a.category === "breed-first");
@@ -15,6 +21,10 @@ export default function AchievementsPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="px-8 md:px-16 lg:px-24 pt-32 md:pt-40 pb-16">
         <SectionLabel className="mb-6">Record</SectionLabel>
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light text-charcoal">
