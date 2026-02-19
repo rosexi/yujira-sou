@@ -94,12 +94,6 @@ export default function Home() {
             regional, national, and international level. Achievements that
             speak for the breed, not for us.
           </p>
-          <Link
-            href="/achievements"
-            className="link-underline text-sm text-bronze mt-6 inline-block"
-          >
-            View achievements
-          </Link>
         </div>
       </section>
 
@@ -127,9 +121,8 @@ export default function Home() {
           <SectionLabel>Affiliations</SectionLabel>
           {[
             "NIPPO",
-            "North American Shikoku Club",
             "AKC FSS",
-            "IABCA",
+            "UKC",
           ].map((club) => (
             <span
               key={club}

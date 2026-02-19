@@ -30,12 +30,6 @@ export default function SiteFooter() {
               <Link href="/the-breed" className="text-sm text-mist hover:text-bronze transition-colors">
                 The Shikoku Ken
               </Link>
-              <Link href="/our-dogs" className="text-sm text-mist hover:text-bronze transition-colors">
-                The Pack
-              </Link>
-              <Link href="/achievements" className="text-sm text-mist hover:text-bronze transition-colors">
-                Achievements
-              </Link>
               <Link href="/puppies" className="text-sm text-mist hover:text-bronze transition-colors">
                 Puppies
               </Link>
@@ -56,14 +50,6 @@ export default function SiteFooter() {
                 className="text-sm text-mist hover:text-bronze transition-colors"
               >
                 Instagram
-              </a>
-              <a
-                href={SOCIAL_LINKS.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-mist hover:text-bronze transition-colors"
-              >
-                Facebook
               </a>
               <a
                 href={`mailto:${SOCIAL_LINKS.email}`}

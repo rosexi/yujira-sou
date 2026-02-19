@@ -17,8 +17,6 @@ export const NAV_LINKS = [
   { name: "Home", href: "/" },
   { name: "Our Kennel", href: "/about" },
   { name: "The Shikoku Ken", href: "/the-breed" },
-  { name: "The Pack", href: "/our-dogs" },
-  { name: "Achievements", href: "/achievements" },
   { name: "Puppies", href: "/puppies" },
   { name: "Contact", href: "/contact" },
 ] as const;
